@@ -5,25 +5,17 @@ import { Menu, Transition } from '@headlessui/react'
 
 const Navbar: React.FC = () => {
   const facialCategories = [
-    'CELULITE',
-    'DEPILAÇÃO',
-    'ESTRIAS',
-    'FLACIDEZ',
-    'GORDURA LOCALIZADA',
-    'MANCHAS',
-    'PÓS-OPERATÓRIO',
-    'MASSAGEM'
+    'BICEPS',
+    'TRICEPS',
+    'PEITORAL',
+    'COSTAS',
+    'PERNAS',
+    'TRAPEZIO',
+    'ABDOMEM',
+    'CARDIO'
   ]
 
-  const bodyCategories = [
-    'ACNE',
-    'DEPILAÇÃO',
-    'DESIDRATAÇÃO',
-    'MANCHAS',
-    'OLHEIRAS',
-    'REJUVENESCIMENTO',
-    'PÓS-OPERATÓRIO'
-  ]
+  const bodyCategories = ['GORDURAS', 'CARBOIDRATOS', 'PROTEÍNAS']
 
   return (
     <Menu>
@@ -43,7 +35,7 @@ const Navbar: React.FC = () => {
               </div>
 
               <div className="-mr-2 -my-2 md:hidden">
-                <Menu.Button className="bg-red-700 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-pink-600 hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-600">
+                <Menu.Button className="bg-red-700 rounded-md p-2 inline-flex items-center justify-center text-gray-100 hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open menu</span>
                   {/* <!-- Heroicon name: menu --> */}
                   <svg
@@ -72,10 +64,10 @@ const Navbar: React.FC = () => {
 
                       <Menu.Button
                         className={`${
-                          open && 'text-gray-400'
-                        } group bg-red-700 rounded-md text-white inline-flex items-center text-base font-medium hover:text-red-200 focus:outline-none focus:ring-2 focus:ring-offset-3 focus:ring-pink-500`}
+                          open && 'text-gray-300'
+                        } group bg-red-700 rounded-md text-white inline-flex items-center text-base font-medium hover:text-red-200 focus:outline-none focus:ring-2 focus:ring-offset-3 focus:ring-red-600`}
                       >
-                        <span>Tratamentos Corporais</span>
+                        <span>Treinamentos</span>
                         {/* <!--
                  Heroicon name: chevron-down
 
@@ -84,7 +76,7 @@ const Navbar: React.FC = () => {
                         <svg
                           className={`${
                             open && 'text-red-200'
-                          } ml-2 h-5 w-5 text-white group-hover:text-gray-500`}
+                          } ml-2 h-5 w-5 text-white group-hover:text-red-200`}
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                           fill="currentColor"
@@ -118,14 +110,14 @@ const Navbar: React.FC = () => {
                         leaveTo="transform scale-95 opacity-0"
                       >
                         <Menu.Items>
-                          <div className="absolute -ml-4 mt-3 transform px-2 w-screen max-w-xs sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                          <div className="absolute -ml-4 mt-3 transform px-2 w-min max-w-xs sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                             <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                              <div className="z-20 relative grid gap-6 bg-gray-900 px-5 py-6 sm:gap-8 sm:p-8">
+                              <div className="z-20 relative grid gap-6 bg-red-900 px-5 py-6 sm:gap-8 sm:p-8">
                                 {facialCategories.map((category, index) => (
                                   <Menu.Item key={index}>
                                     <a
                                       href="#"
-                                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800"
+                                      className="-m-3 p-2 flex items-start rounded-lg hover:bg-red-800"
                                     >
                                       <div className="ml-4">
                                         <p className="text-sm font-medium text-white">
@@ -151,10 +143,10 @@ const Navbar: React.FC = () => {
 
                       <Menu.Button
                         className={`${
-                          open && 'text-gray-400'
-                        } group bg-gray-900 rounded-md text-white inline-flex items-center text-base font-medium hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-3 focus:ring-pink-500`}
+                          open && 'text-gray-300'
+                        } group bg-red-700 rounded-md text-white inline-flex items-center text-base font-medium hover:text-red-200 focus:outline-none focus:ring-2 focus:ring-offset-3 focus:ring-red-600`}
                       >
-                        <span>Tratamentos Faciais</span>
+                        <span>Dietas</span>
                         {/* <!--
                  Heroicon name: chevron-down
 
@@ -162,8 +154,8 @@ const Navbar: React.FC = () => {
                --> */}
                         <svg
                           className={`${
-                            open && 'text-gray-400'
-                          } ml-2 h-5 w-5 text-white group-hover:text-gray-500`}
+                            open && 'text-red-200'
+                          } ml-2 h-5 w-5 text-white group-hover:text-red-200`}
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                           fill="currentColor"
@@ -197,14 +189,14 @@ const Navbar: React.FC = () => {
                         leaveTo="transform scale-95 opacity-0"
                       >
                         <Menu.Items>
-                          <div className="absolute -ml-4 mt-3 transform px-2 w-screen max-w-xs sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                          <div className="absolute -ml-4 mt-3 transform px-2 w-min max-w-xs sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                             <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                              <div className="z-20 relative grid gap-6 bg-gray-900 px-5 py-6 sm:gap-8 sm:p-8">
+                              <div className="z-20 relative grid gap-6 bg-red-900 px-5 py-6 sm:gap-8 sm:p-8">
                                 {bodyCategories.map((category, index) => (
                                   <Menu.Item key={index}>
                                     <a
                                       href="#"
-                                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800"
+                                      className="-m-3 p-2 flex items-start rounded-lg hover:bg-red-800"
                                     >
                                       <div className="ml-4">
                                         <p className="text-sm font-medium text-white">
@@ -225,19 +217,19 @@ const Navbar: React.FC = () => {
 
                 <a
                   href="#"
-                  className="text-base font-medium text-white hover:text-gray-400"
+                  className="text-base font-medium text-white hover:text-red-200"
                 >
                   Gift Card
                 </a>
                 <a
                   href="#"
-                  className="text-base font-medium text-white hover:text-gray-400"
+                  className="text-base font-medium text-white hover:text-red-200"
                 >
                   Loja Online
                 </a>
                 <a
                   href="#"
-                  className="text-base font-medium text-white hover:text-gray-400"
+                  className="text-base font-medium text-white hover:text-red-200"
                 >
                   Unidades
                 </a>
@@ -246,15 +238,9 @@ const Navbar: React.FC = () => {
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <a
                   href="#"
-                  className="whitespace-nowrap text-base font-medium text-pink-600 hover:text-pink-400"
+                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-white bg-black hover:bg-red-900"
                 >
-                  Login
-                </a>
-                <a
-                  href="#"
-                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-white bg-pink-600 hover:bg-pink-700"
-                >
-                  Cadastrar
+                  Área do aluno
                 </a>
               </div>
             </div>
@@ -281,20 +267,22 @@ const Navbar: React.FC = () => {
               leaveTo="transform scale-95 opacity-0"
             >
               <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-                <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-gray-900 divide-y-2 divide-pink-600">
+                <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-red-700 divide-y-2 divide-gray-100">
                   <div className="pt-5 pb-6 px-5">
                     <div className="flex items-center justify-between">
                       <div>
-                        <img
-                          className="h-8 w-auto"
-                          src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                          alt="Workflow"
+                        <Image
+                          src={'/nav-logo.png'}
+                          layout="fixed"
+                          width={50}
+                          height={50}
+                          className="cursor-pointer"
                         />
                       </div>
                       <div className="-mr-2">
                         <Menu.Button
                           className={
-                            'bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-pink-600 hover:text-pink-400 hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-600'
+                            'bg-red-900 rounded-md p-2 inline-flex items-center justify-center text-white hover:bg-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'
                           }
                         >
                           <span className="sr-only">Close menu</span>
@@ -322,27 +310,27 @@ const Navbar: React.FC = () => {
                       <nav className="grid gap-y-8">
                         <a
                           href="#"
-                          className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-900"
+                          className="-m-3 p-3 flex items-center rounded-md hover:bg-red-900"
                         >
                           {/* <!-- Heroicon name: chart-bar --> */}
                           <span className="ml-3 text-base font-medium text-white">
-                            Tratamentos Corporais
+                            Treinamentos
                           </span>
                         </a>
 
                         <a
                           href="#"
-                          className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-900"
+                          className="-m-3 p-3 flex items-center rounded-md hover:bg-red-900"
                         >
                           {/* <!-- Heroicon name: chart-bar --> */}
                           <span className="ml-3 text-base font-medium text-white">
-                            Tratamentos Faciais
+                            Dietas
                           </span>
                         </a>
 
                         <a
                           href="#"
-                          className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-900"
+                          className="-m-3 p-3 flex items-center rounded-md hover:bg-red-900"
                         >
                           {/* <!-- Heroicon name: chart-bar --> */}
                           <span className="ml-3 text-base font-medium text-white">
@@ -351,7 +339,7 @@ const Navbar: React.FC = () => {
                         </a>
                         <a
                           href="#"
-                          className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-900"
+                          className="-m-3 p-3 flex items-center rounded-md hover:bg-red-900"
                         >
                           {/* <!-- Heroicon name: chart-bar --> */}
                           <span className="ml-3 text-base font-medium text-white">
@@ -361,7 +349,7 @@ const Navbar: React.FC = () => {
 
                         <a
                           href="#"
-                          className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-900"
+                          className="-m-3 p-3 flex items-center rounded-md hover:bg-red-900"
                         >
                           {/* <!-- Heroicon name: chart-bar --> */}
                           <span className="ml-3 text-base font-medium text-white">
@@ -375,15 +363,15 @@ const Navbar: React.FC = () => {
                     <div>
                       <a
                         href="#"
-                        className="w-full flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-white bg-pink-600 hover:bg-pink-700"
+                        className="w-full flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-white bg-black hover:bg-red-900"
                       >
                         Cadastrar
                       </a>
-                      <p className="mt-6 text-center text-base font-medium text-gray-500">
+                      <p className="mt-6 text-center text-base font-medium text-gray-100">
                         Já é cliente?
                         <a
                           href="#"
-                          className="text-pink-600 hover:text-pink-400"
+                          className="text-yellow-400 hover:text-black"
                         >
                           {' '}
                           Faça Login
