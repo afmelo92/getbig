@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
   return (
     <Menu>
       {({ open: hamburgerOpen }) => (
-        <div className="relative z-20 bg-red-700">
+        <div className="relative w-full z-20 bg-red-700">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex justify-between items-center border-b-2 border-none py-6 md:justify-start md:space-x-10">
               <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -365,16 +365,16 @@ const Navbar: React.FC = () => {
                         href="#"
                         className="w-full flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-white bg-black hover:bg-red-900"
                       >
-                        Cadastrar
+                        Área do aluno
                       </a>
                       <p className="mt-6 text-center text-base font-medium text-gray-100">
-                        Já é cliente?
+                        Não é cliente?
                         <a
                           href="#"
                           className="text-yellow-400 hover:text-black"
                         >
                           {' '}
-                          Faça Login
+                          Cadastre-se
                         </a>
                       </p>
                     </div>
