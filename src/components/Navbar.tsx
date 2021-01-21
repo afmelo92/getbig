@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { Menu, Transition } from '@headlessui/react'
 
@@ -236,12 +237,14 @@ const Navbar: React.FC = () => {
               </nav>
 
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                <a
-                  href="#"
-                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-white bg-black hover:bg-red-900"
-                >
-                  Área do aluno
-                </a>
+                <Link href="/signin">
+                  <a
+                    href="#"
+                    className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-white bg-black hover:bg-red-900"
+                  >
+                    Área do aluno
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -361,21 +364,25 @@ const Navbar: React.FC = () => {
                   </div>
                   <div className="py-6 px-5 space-y-6">
                     <div>
-                      <a
-                        href="#"
-                        className="w-full flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-white bg-black hover:bg-red-900"
-                      >
-                        Área do aluno
-                      </a>
-                      <p className="mt-6 text-center text-base font-medium text-gray-100">
-                        Não é cliente?
+                      <Link href="/signin">
                         <a
                           href="#"
-                          className="text-yellow-400 hover:text-black"
+                          className="w-full flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-base font-medium text-white bg-black hover:bg-red-900"
                         >
-                          {' '}
-                          Cadastre-se
+                          Área do aluno
                         </a>
+                      </Link>
+                      <p className="mt-6 text-center text-base font-medium text-gray-100">
+                        Não é cliente?
+                        <Link href="/signup">
+                          <a
+                            href="#"
+                            className="text-yellow-400 hover:text-black"
+                          >
+                            {' '}
+                            Cadastre-se
+                          </a>
+                        </Link>
                       </p>
                     </div>
                   </div>
